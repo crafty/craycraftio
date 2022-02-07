@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/craycraftio/static/css/main.b26955f5.chunk.css",
-    "main.js": "/craycraftio/static/js/main.f5d45eb5.chunk.js",
-    "main.js.map": "/craycraftio/static/js/main.f5d45eb5.chunk.js.map",
+    "main.js": "/craycraftio/static/js/main.25ec7553.chunk.js",
+    "main.js.map": "/craycraftio/static/js/main.25ec7553.chunk.js.map",
     "runtime-main.js": "/craycraftio/static/js/runtime-main.399573f6.js",
     "runtime-main.js.map": "/craycraftio/static/js/runtime-main.399573f6.js.map",
     "static/js/2.a1f9f1f0.chunk.js": "/craycraftio/static/js/2.a1f9f1f0.chunk.js",
     "static/js/2.a1f9f1f0.chunk.js.map": "/craycraftio/static/js/2.a1f9f1f0.chunk.js.map",
     "index.html": "/craycraftio/index.html",
-    "precache-manifest.b953442914139388ce2d235c4ef55e0b.js": "/craycraftio/precache-manifest.b953442914139388ce2d235c4ef55e0b.js",
+    "precache-manifest.5cbf411f60c9f03211cbd55ed44c5544.js": "/craycraftio/precache-manifest.5cbf411f60c9f03211cbd55ed44c5544.js",
     "service-worker.js": "/craycraftio/service-worker.js",
     "static/css/main.b26955f5.chunk.css.map": "/craycraftio/static/css/main.b26955f5.chunk.css.map"
   }
