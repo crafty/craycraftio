@@ -1,10 +1,11 @@
-import styled from 'styled-components';
-import { fadeIn } from '../../Styles/animations';
+import styled from "styled-components";
+import { fadeIn } from "../../Styles/animations";
+import { rubberBand } from "../../Styles/transitions";
 
 export const MenuContainer = styled.div`
   width: 100%;
   height: 100%;
-  visibility: ${props => (props.active ? null : 'hidden')};
+  visibility: ${(props) => (props.active ? null : "hidden")};
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -21,8 +22,8 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuItem = styled.div`
-  background-color: ${props => props.theme.backgroundTwo};
-  color: ${props => props.theme.white};
+  background-color: ${(props) => props.theme.backgroundTwo};
+  color: ${(props) => props.theme.white};
   height: 33.5%;
   width: 100%;
   display: flex;
@@ -30,15 +31,28 @@ export const MenuItem = styled.div`
   flex-direction: column;
   text-align: center;
   cursor: pointer;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   letter-spacing: 6px;
-  transform: ${props =>
-    props.active ? 'translateX(0px)' : `translateX(${props.offSide})`};
+  transform: ${(props) =>
+    props.active ? "translateX(0px)" : `translateX(${props.offSide})`};
   transition: all 0.4s ease-in-out;
 
   :hover {
-    background-color: ${props => props.theme.background};
-    color: ${props => props.theme.accentColor};
+    background-color: ${(props) => props.theme.background};
+    color: ${(props) => props.theme.accentColor};
     letter-spacing: 10px;
+  }
+`;
+
+export const Icon = styled.i`
+  width: 60px;
+  height: 60px;
+  color: ${(props) => props.theme.textLight};
+  cursor: pointer;
+  transition: all 0.6s ${rubberBand};
+
+  :hover {
+    transform: scale(1.3);
+    color: ${(props) => props.theme.accentColor} !important;
   }
 `;

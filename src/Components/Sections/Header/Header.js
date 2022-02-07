@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import random from 'lodash/random';
-import merge from 'lodash/merge';
-import tinycolor from 'tinycolor2';
-import { scroller } from 'react-scroll';
-import Particles from 'react-particles-js';
+import React, { useState, useEffect } from "react";
+import random from "lodash/random";
+import merge from "lodash/merge";
+import tinycolor from "tinycolor2";
+import { scroller } from "react-scroll";
+import Particles from "react-particles-js";
 import {
   HeaderContainer,
   TitleBox,
@@ -11,50 +11,50 @@ import {
   Subtitle,
   ChevBox,
   ChevSide,
-} from './styles';
+} from "./styles";
 
-const Header = props => {
+const Header = (props) => {
   const { opacity } = props;
 
   const subtitles = [
-    'JavaScript Aficionado',
-    'Video Game Sommelier',
-    'Pretentious Title Curator',
-    'Professional Computer Nerd',
+    "JavaScript Aficionado",
+    "Video Game Sommelier",
+    "Pretentious Title Curator",
+    "Professional Computer Nerd",
   ];
 
   const particleStyles = {
-    position: 'fixed',
+    position: "fixed",
     top: 0,
     left: 0,
-    width: '100%',
-    margin: '0',
-    padding: '0',
-    display: 'block',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
+    width: "100%",
+    margin: "0",
+    padding: "0",
+    display: "block",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
   };
 
   const [titleIndex, setTitleIndex] = useState(0);
   const [firstRun, setFirstRun] = useState(true);
 
   const scrollTo = () => {
-    scroller.scrollTo('about', {
+    scroller.scrollTo("about", {
       duration: 2000,
       delay: 0,
-      smooth: 'easeInOutQuart',
+      smooth: "easeInOutQuart",
     });
   };
 
   const randomItemFromArray = (prevValue, values) => {
-    const validValues = values.filter(value => value !== prevValue);
+    const validValues = values.filter((value) => value !== prevValue);
     const index = random(0, validValues.length - 1);
     return validValues[index];
   };
 
   const randomizeParticles = () => {
     const { type: prevType } = props.particlesConfig.particles.shape;
-    const shapes = ['circle', 'edge', 'triangle', 'polygon', 'star'];
+    const shapes = ["circle", "edge", "triangle", "polygon", "star"];
     const type = randomItemFromArray(prevType, shapes);
     const nb_sides = random(3, 10);
     const hue = random(0, 360);
@@ -98,7 +98,7 @@ const Header = props => {
         <Particles
           style={{
             ...particleStyles,
-            display: `${props.progress >= 1 ? 'none' : 'block'}`,
+            display: `${props.progress >= 1 ? "none" : "block"}`,
           }}
           params={props.particlesConfig}
         />
@@ -107,10 +107,10 @@ const Header = props => {
         <Title>CRAYCRAFT</Title>
         <Subtitle>{subtitles[titleIndex]}</Subtitle>
       </TitleBox>
-      <ChevBox opacity={opacity - 0.3} onClick={scrollTo}>
+      {/* <ChevBox opacity={opacity - 0.3} onClick={scrollTo}>
         <ChevSide leftSide />
         <ChevSide rightSide />
-      </ChevBox>
+      </ChevBox> */}
     </HeaderContainer>
   );
 };

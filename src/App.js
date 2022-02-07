@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import './Styles/App.css';
-import Navigation from './Components/Navigation';
-import Menu from './Components/Menu';
-import { theme } from './Styles/theme';
-import config from './Assets/particles.json';
-import merge from 'lodash/merge';
+import React, { useState, useEffect } from "react";
+import styled, { ThemeProvider } from "styled-components";
+import "./Styles/App.css";
+import Navigation from "./Components/Navigation";
+import Menu from "./Components/Menu";
+import { theme } from "./Styles/theme";
+import config from "./Assets/particles.json";
+import merge from "lodash/merge";
 
 import {
   Header,
@@ -13,7 +13,7 @@ import {
   Projects,
   Contact,
   Footer,
-} from './Components/Sections/';
+} from "./Components/Sections/";
 
 const AppContainer = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ const App = () => {
   const [opacity, setOpacity] = useState(1);
   const [progress, setProgress] = useState(0);
 
-  const switchAccentColor = color => {
+  const switchAccentColor = (color) => {
     const newConfig = merge({}, particlesConfig, {
       particles: {
         color: {
@@ -52,9 +52,9 @@ const App = () => {
       setProgress(progress);
       setOpacity(newOpacity, progress);
     };
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
 
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
     // eslint-disable-next-line
   }, []);
 
@@ -76,10 +76,10 @@ const App = () => {
           opacity={opacity}
           setAccentColor={setAccentColor}
         />
-        <About />
+        {/* <About />
         <Projects />
         <Contact />
-        <Footer />
+        <Footer /> */}
       </ThemeProvider>
     </AppContainer>
   );

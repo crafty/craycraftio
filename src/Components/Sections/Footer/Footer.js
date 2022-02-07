@@ -1,7 +1,7 @@
-import React from 'react';
-import { FooterContainer, SocialBox, Icon, Foot } from './styles';
+import React from "react";
+import { FooterContainer, SocialBox, Icon, Foot } from "./styles";
 
-const Footer = props => (
+const Footer = (props) => (
   <FooterContainer id="footer">
     <SocialBox accentColor={props.accentColor}>
       <a
