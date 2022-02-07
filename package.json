@@ -2,7 +2,7 @@
   "name": "craycraftio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://craycraftdan.github.io/craycraftio/",
+  "homepage": "https://crafty.github.io/craycraftio/",
   "dependencies": {
     "disable-scroll": "^0.5.0",
     "lodash": "^4.17.15",
