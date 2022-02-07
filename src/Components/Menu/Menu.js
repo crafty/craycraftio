@@ -35,7 +35,7 @@ const Menu = (props) => {
       </a> */}
       <MenuItem key={"GITHUB"} active={props.active}>
         <a
-          href="https://github.com/craycraftdan"
+          href="https://github.com/crafty"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "inherit", textDecoration: "none" }}
